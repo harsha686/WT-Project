@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transition: background 0.5s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: 450px;
+    margin: 20px;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.152);
+}
+
+.search-section {
+    margin-bottom: 1.5rem;
+}
+
+#form {
+    display: flex;
+    gap: 10px;
+}
+
+#cityinput {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 12px;
+    background: #4A90E2;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #357ABD;
+    transform: translateY(-2px);
+}
+
+.weather-info {
+    display: none;
+}
+
+.main-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.temperature {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#weather-icon img {
+    width: 120px;
+    height: auto;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.detail-item {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.201);
+}
+
+.detail-item i {
+    font-size: 1.5rem;
+    color: #4A90E2;
+    margin-bottom: 0.5rem;
+}
+
+.error-message {
+    color: #dc3545;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: rgba(220, 53, 69, 0.1);
+}
+
+.loading {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 480px) {
+    .weather-card {
+        padding: 1.5rem;
+    }
+    
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+}
